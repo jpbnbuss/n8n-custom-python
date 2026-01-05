@@ -9,9 +9,8 @@ RUN apk add --no-cache python3 py3-pip build-base python3-dev libxml2-dev libxsl
 RUN pip3 install --upgrade pip --break-system-packages
 RUN pip3 install python-pptx python-docx pandas openpyxl --break-system-packages
 
-# 2. Instalação do officeparser (NOVA PARTE)
-# Instalamos globalmente e na pasta do n8n para garantir que o nó Code o encontre
-RUN npm install -g officeparser
+# 2. Instalação do officeparser, pdf-parse
+RUN npm install -g officeparser pdf-parse
 
-# Volta para o usuário padrão do n8n (segurança)
+# Volta para o usuário padrão do n8n
 USER node
