@@ -11,7 +11,7 @@ RUN apk add --no-cache python3 py3-pip build-base python3-dev libxml2-dev libxsl
 # Cria um ambiente virtual (opcional mas recomendado, ou instala direto no sistema)
 # Aqui instalaremos direto no sistema para simplificar a chamada no n8n
 RUN pip3 install --upgrade pip --break-system-packages
-RUN pip3 install python-pptx --break-system-packages
+RUN pip3 install python-pptx python-docx pandas openpyxl --break-system-packages
 
 # Volta para o usuário padrão do n8n (segurança)
 USER node
