@@ -1,5 +1,5 @@
 # Usa a imagem oficial do n8n como base
-FROM n8nio/n8n:1.121.2
+FROM n8nio/n8n:2.3.0
 
 # Troca para usuário root para poder instalar pacotes
 USER root
